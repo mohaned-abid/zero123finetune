@@ -16,14 +16,14 @@ data:
     train:
       target: src.data.objaverse_zero123plus.ObjaverseData
       params:
-        root_dir: /content/objaverse
+        root_dir: /content/zero123finetune/objaverse
         meta_fname: lvis-annotations.json
         image_dir: rendering_zero123plus
         validation: false
     validation:
       target: src.data.objaverse_zero123plus.ObjaverseData
       params:
-        root_dir: /content/objaverse
+        root_dir: /content/zero123finetune/objaverse
         meta_fname: lvis-annotations.json
         image_dir: rendering_zero123plus
         validation: true
