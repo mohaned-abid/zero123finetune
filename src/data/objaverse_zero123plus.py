@@ -76,9 +76,9 @@ class ObjaverseData(Dataset):
             
         total_objects = len(self.paths)
         if validation:
-            self.paths = self.paths[-270:] # used last 16 as validation
+            self.paths = self.paths[-3:] # used last 16 as validation
         else:
-            self.paths = self.paths[:-270]
+            self.paths = self.paths[:-3]
         print('============= length of dataset %d =============' % len(self.paths))
 
     def __len__(self):
