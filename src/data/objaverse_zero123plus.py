@@ -86,7 +86,7 @@ class ObjaverseData(Dataset):
 
     def load_im(self, path, color):
         img = Image.open(path)
-        #img = img.resize((320, 320), Image.Resampling.LANCZOS)
+        img = img.resize((320, 320), Image.Resampling.LANCZOS)
         
         pil_img = img.convert("RGBA")
 
