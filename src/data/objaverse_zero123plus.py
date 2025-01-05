@@ -108,7 +108,7 @@ class ObjaverseData(Dataset):
             img_list = []
             try:
                 for idx in range(7):
-                    img, alpha = self.load_im(os.path.join(image_path, '%03d.png' % idx), bkg_color)
+                    img, alpha = self.load_im(os.path.join(image_path, '%04d.png' % idx), bkg_color)
                     img_list.append(img)
 
             except Exception as e:
