@@ -12,20 +12,20 @@ data:
   target: src.data.objaverse_zero123plus.DataModuleFromConfig
   params:
     batch_size: 1
-    num_workers: 1
+    num_workers: 4
     train:
       target: src.data.objaverse_zero123plus.ObjaverseData
       params:
-        root_dir: /content/drive/MyDrive/testdataset3d
-        meta_fname: lvis-annotations.json
-        image_dir: merged_multiview
+        root_dir: /content/drive/MyDrive/3ddata_train1
+        meta_fname: lvis-annotations-train.json
+        image_dir: merged_multiview_train
         validation: false
     validation:
       target: src.data.objaverse_zero123plus.ObjaverseData
       params:
-        root_dir: /content/drive/MyDrive/testdataset3d
-        meta_fname: lvis-annotations.json
-        image_dir: merged_multiview
+        root_dir: /content/drive/MyDrive/3ddata_train1
+        meta_fname: lvis-annotations-train.json
+        image_dir: merged_multiview_train
         validation: true
 
 
@@ -39,7 +39,7 @@ lightning:
 
   trainer:
     benchmark: true
-    max_epochs: 10
+    max_epochs: 100
     gradient_clip_val: 1.0
     val_check_interval: 2
     num_sanity_val_steps: 0
