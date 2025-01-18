@@ -76,9 +76,9 @@ class ObjaverseData(Dataset):
             
         total_objects = len(self.paths)
         if validation:
-            self.paths = self.paths[-3:] # used last 16 as validation
+            self.paths = self.paths[-40:] # used last 16 as validation
         else:
-            self.paths = self.paths[:-3]
+            self.paths = self.paths[:-40]
         print('============= length of dataset %d =============' % len(self.paths))
 
     def __len__(self):
@@ -86,7 +86,7 @@ class ObjaverseData(Dataset):
 
     def load_im(self, path, color):
         img = Image.open(path)
-        img = img.resize((32, 32), Image.Resampling.LANCZOS)
+        img = img.resize((320, 320), Image.Resampling.LANCZOS)
         
         pil_img = img.convert("RGBA")
 
