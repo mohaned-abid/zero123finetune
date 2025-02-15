@@ -5,7 +5,7 @@ model:
     drop_cond_prob: 0.1
 
     stable_diffusion_config:
-      pretrained_model_name_or_path: TencentARC/InstantMesh
+      pretrained_model_name_or_path: sudo-ai/zero123plus-v1.2
       custom_pipeline: ./zero123plus
 
 data:
