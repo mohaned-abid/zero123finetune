@@ -16,14 +16,14 @@ data:
     train:
       target: src.data.objaverse_zero123plus.ObjaverseData
       params:
-        root_dir: /content/drive/MyDrive/3ddata_train1
+        root_dir: /content/drive/MyDrive/3ddata_train2
         meta_fname: lvis-annotations-train.json
         image_dir: merged_multiview_train
         validation: false
     validation:
       target: src.data.objaverse_zero123plus.ObjaverseData
       params:
-        root_dir: /content/drive/MyDrive/3ddata_train1
+        root_dir: /content/drive/MyDrive/3ddata_train2
         meta_fname: lvis-annotations-train.json
         image_dir: merged_multiview_train
         validation: true
